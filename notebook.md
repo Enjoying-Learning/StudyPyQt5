@@ -16,6 +16,7 @@ PyQt5 API 拥有 620 多个类和 6000 个函数。它是一个跨平台的工�
 - [x] `QDialog`：最普通的顶级窗口。如果一个窗口控件没有被嵌入到父窗口控件中，那么该窗口控件就被称为顶级窗口控件。在通常情况下，顶级窗口控件是有框架和标题栏的窗口。在 Qt 中，`QMainWindow` 和不同的 `QDialog` 的子类是最普通的顶级窗口。
 
 下面是常用的控件。
+
 - [x] `QLabel` 控件：用来显示文本或图像。
 - [x] `QLineEdit` 窗口控件：提供了一个单页面的单行文本编辑器。
 - [x] `QTextEdit` 窗口控件：提供了一个单页面的多行文本编辑器。
@@ -54,10 +55,10 @@ from PyQt5.QtWidgets import  QApplication
 
 ```python
 if __name__ == "__main__":
-	app = QApplication(sys.argv)
-	# 界面生成代码 ...
+    app = QApplication(sys.argv)
+    # 界面生成代码 ...
 
-	sys.exit(app.exec_())  
+    sys.exit(app.exec_())  
 ```
 
 `sys.exit()` 函数可以结束一个应用程序，使应用程序在主循环中退出。
@@ -65,4 +66,3 @@ if __name__ == "__main__":
 `QApplication` 采用事件循环机制，当 `QApplication` 初始化后，就进入应用程序的主循环（Main Loop），开始进行事件处理，主循环从窗口系统接收事件，并将这些事件分配到应用程序的控件中。当调用 `sys.exit()` 函数时，主循环就会结束。
 
 PyQt5 的应用程序是事件驱动的，比如键盘事件、鼠标事件等。在没有任何事件的情况下，应用程序处于睡眠状态。主循环控制应用程序什么时候进入睡眠状态，什么时候被唤醒。
-
